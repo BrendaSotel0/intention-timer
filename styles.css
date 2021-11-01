@@ -50,8 +50,17 @@ aside {
 
 .category {
   border: red 3px solid;
+  display: flex;
+  align-content: space-around;
 }
 .category > button {
-  border-color: #B3FD78;
+  border: #FFFFFF 3px solid;
   background-color: #46424D;
+  width: 100px;
+  height: 52px;
+}
+
+.category > button > img {
+  width: 62%;
+  height: 62%;
 }
