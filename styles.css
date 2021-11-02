@@ -43,16 +43,16 @@ aside {
 .new-activity {
   width: 66%;
   height: 100%;
-  align-self: flex-start;
   background-color: #46424D;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  border: 5px solid blue;
 }
 
 .category-buttons {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
+  border: 5px solid orange;
 }
 .category-buttons > button {
   border: #FFFFFF 3px solid;
@@ -64,4 +64,19 @@ aside {
 .category-buttons > button > img {
   width: 62%;
   height: 62%;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border: purple solid 5px;
+}
+
+.accomplish{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px pink solid;
 }
