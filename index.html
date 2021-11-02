@@ -9,54 +9,59 @@
   </header>
   <main class="main">
     <section class="activity-container">
-      <section class="new-activity">
-        <h4>Select a category:</h4>
-        <section class="category-buttons">
-          <button type=button class="study">
-            <img src="assets/study.svg" alt="passive study">
-            Study
-          </button>
-          <button type=button class="meditate">
-            <img src="assets/meditate.svg" alt="passive meditate">
-            Meditate
-          </button>
-          <button type=button class="exercise">
-            <img src="assets/exercise.svg" alt="passive exercise">
-            Exercise
-          </button>
+      <div class="new-activity">
+        <h1>New Activity</h1>
+        <section class="other-new-activity">
+          <h4>Select a category:</h4>
+          <section class="category-buttons">
+            <button type=button class="study">
+              <img src="assets/study.svg" alt="passive study">
+              Study
+            </button>
+            <button type=button class="meditate">
+              <img src="assets/meditate.svg" alt="passive meditate">
+              Meditate
+            </button>
+            <button type=button class="exercise">
+              <img src="assets/exercise.svg" alt="passive exercise">
+              Exercise
+            </button>
+          </section>
+          <section class="accomplish">
+            <form>
+              <div class="accomplish-title">
+                <label for="accomplish-title">What would you like to accomplish this time?</label>
+              </div>
+              <div class="accomplish-input">
+                <input type="text" name="accomplish-input">
+              </div>
+            </form>
+          </section>
+          <section class="time">
+            <form class="minutes">
+              <div class="minutes-title">
+                <label for="minutes">Minutes</label>
+              </div>
+              <div class="minutes-input">
+                <input type="text" name="minutes-input">
+              </div>
+            </form>
+            <form class="seconds">
+              <div class="seconds-title">
+                <label for="seconds">Seconds</label>
+              </div>
+              <div class="seconds-input">
+                <input type="text" name="seconds-input">
+              </div>
+            </form>
+          </section>
         </section>
-        <section class="accomplish">
-          <form>
-            <div class="accomplish-title">
-              <label for="accomplish-title">What would you like to accomplish this time?</label>
-            </div>
-            <div class="accomplish-input">
-              <input type="text" name="accomplish-input">
-            </div>
-          </form>
-        </section>
-        <section class="time">
-          <form class="minutes">
-            <div class="minutes-title">
-              <label for="minutes">Minutes</label>
-            </div>
-            <div class="minutes-input">
-              <input type="text" name="minutes-input">
-            </div>
-          </form>
-          <form class="seconds">
-            <div class="seconds-title">
-              <label for="seconds">Seconds</label>
-            </div>
-            <div class="seconds-input">
-              <input type="text" name="seconds-input">
-            </div>
-          </form>
-        </section>
-      </section>
+      </div>
     </section>
     <aside class="past-activities">
         <h3>Past Activies</h3>
+        <center><h5>You haven't logged any activities yet.</h5>
+        <h5>Complete the form to the left to get started!</h5></center>
     </aside>
   </main>
 </body>

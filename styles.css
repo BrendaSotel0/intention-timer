@@ -47,31 +47,47 @@ aside > h3 {
   width: 66%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  /* align-items: center; */
 }
 
 .new-activity {
-  background-color: #46424D;
-  border: 5px solid blue;
+  background-color: #2B2733;
+  /* border: 5px solid blue; */
   height: 85%;
-  width: 90%;
+  width: 96%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 
+.other-new-activity {
+  background-color: #46424D;
+  /* border: 5px solid blue; */
+  height: 85%;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0em 2em 0em 6em;
+  border-radius: 1%;
+  box-shadow: 5px 5px #26222D;
+  font-size: 110%;
+}
+
 h4 {
-  margin-left: 4%;
+  /* margin-left: 14%; */
 }
 
 .category-buttons {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  border: 5px solid orange;
+  /* border: 5px solid orange; */
 }
 .category-buttons > button {
   border: #FFFFFF 3px solid;
@@ -89,8 +105,8 @@ h4 {
 .time {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  border: purple solid 5px;
+  justify-content: space-between;
+  /* border: purple solid 5px; */
 }
 
 .accomplish{
@@ -98,13 +114,14 @@ h4 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: 5px pink solid;
-  padding-left: 70px;
+  /* border: 5px pink solid; */
+  /* padding-left: 70px; */
 }
 
 input{
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFF;
-  width: 125%;
+  width: 100%;
+  padding-top: 7%;
 }
