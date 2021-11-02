@@ -29,14 +29,15 @@ main {
   display: flex;
   flex-direction: row;
   justify-content:  space-between;
-
+  height: 100%;
 }
 
 aside {
   width: 33%;
   height: 100%;
   align-self: flex-end;
-  border-left: #46424D 3px solid;
+  /* border-left: #46424D 3px solid; */
+  border: 2px solid pink;
   margin: 0px
 
 }
@@ -46,6 +47,7 @@ aside {
   height: 100%;
   align-self: flex-start;
   background-color: #46424D;
+  border: solid blue;
 }
 
 .category {
