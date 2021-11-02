@@ -1,17 +1,19 @@
 <html>
 <head>
   <link rel="stylesheet" href="./styles.css">
-  <link href="https://fonts.google.com/?query=mont&selection.family=Montserrat:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
-  <body>
-    <header class="header">
-      <div>INTENTION TIMER</div>
-    </header>
-    <main class="main">
-      <h2>New Activity</h2>
-      <section class="new-activity">
-        <div class="category">
-          <section class="select-category">
+<body>
+  <header class="header">
+    <h3>INTENTION TIMER</h3>
+  </header>
+  <main class="main">
+    <section class="activity-container">
+      <div class="new-activity">
+        <h1>New Activity</h1>
+        <section class="other-new-activity">
+          <h4>Select a category:</h4>
+          <section class="category-buttons">
             <button type=button class="study">
               <img src="assets/study.svg" alt="passive study">
               Study
@@ -24,14 +26,45 @@
               <img src="assets/exercise.svg" alt="passive exercise">
               Exercise
             </button>
-          </div>
+          </section>
+          <section class="accomplish">
+            <form>
+              <div class="accomplish-title">
+                <label for="accomplish-title">What would you like to accomplish this time?</label>
+              </div>
+              <div class="accomplish-input">
+                <input type="text" name="accomplish-input">
+              </div>
+            </form>
+          </section>
+          <section class="time">
+            <form class="minutes">
+              <div class="minutes-title">
+                <label for="minutes">Minutes</label>
+              </div>
+              <div class="minutes-input">
+                <input type="text" name="minutes-input">
+              </div>
+            </form>
+            <form class="seconds">
+              <div class="seconds-title">
+                <label for="seconds">Seconds</label>
+              </div>
+              <div class="seconds-input">
+                <input type="text" name="seconds-input">
+              </div>
+            </form>
+          </section>
         </section>
-      </section>
-      <aside class="past-activities">Past Activities</aside>
-    </main>
-
-
-  </body>
-  <script type="text/javascript" src="Activity.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+      </div>
+    </section>
+    <aside class="past-activities">
+        <h3>Past Activies</h3>
+        <center><h5>You haven't logged any activities yet.</h5>
+        <h5>Complete the form to the left to get started!</h5></center>
+    </aside>
+  </main>
+</body>
+<script type="text/javascript" src="Activity.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </html>

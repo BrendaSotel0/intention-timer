@@ -8,17 +8,14 @@ Meditate: #C278FD
 Exercise: #FD8078
 Error: #EFB7EC */
 
-
-
-body {
-  background-color: #2B2733;
-  font-family: "Montserrat";
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
 }
 
 header {
-  height: 10%;
+  height: 8%;
   width: 100%;
-  border: 5px green solid;
   background-color: #46424D;
   display: flex;
   align-items: center;
@@ -26,43 +23,105 @@ header {
 }
 
 main {
+  margin: 0px;
   display: flex;
   flex-direction: row;
-  justify-content:  space-between;
+  justify-content: space-between;
   height: 100%;
+  background-color: #2B2733;
 }
 
 aside {
+  margin: 0px;
   width: 33%;
   height: 100%;
   align-self: flex-end;
-  /* border-left: #46424D 3px solid; */
-  border: 2px solid pink;
-  margin: 0px
+  border-left: #46424D 3px solid;
+}
 
+aside > h3 {
+  margin-left: 5%;
+}
+
+.activity-container {
+  width: 66%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2%;
+  /* align-items: center; */
 }
 
 .new-activity {
-  width: 63%;
-  height: 100%;
-  align-self: flex-start;
-  background-color: #46424D;
-  border: solid blue;
-}
-
-.category {
-  border: red 3px solid;
+  background-color: #2B2733;
+  /* border: 5px solid blue; */
+  height: 85%;
+  width: 96%;
   display: flex;
-  align-content: space-around;
-}
-.category > button {
-  border: #FFFFFF 3px solid;
-  background-color: #46424D;
-  width: 100px;
-  height: 52px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-.category > button > img {
+.other-new-activity {
+  background-color: #46424D;
+  /* border: 5px solid blue; */
+  height: 85%;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0em 2em 0em 6em;
+  border-radius: 1%;
+  box-shadow: 5px 5px #26222D;
+  font-size: 110%;
+}
+
+h4 {
+  /* margin-left: 14%; */
+}
+
+.category-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 5px solid orange; */
+}
+.category-buttons > button {
+  border: #FFFFFF 3px solid;
+  border-radius: 4px;
+  background-color: #46424D;
+  width: 120px;
+  height: 60px;
+}
+
+.category-buttons > button > img {
   width: 62%;
   height: 62%;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border: purple solid 5px; */
+}
+
+.accomplish{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 5px pink solid; */
+  /* padding-left: 70px; */
+}
+
+input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  width: 100%;
+  padding-top: 7%;
 }
