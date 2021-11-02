@@ -22,7 +22,11 @@ class Activity {
     this.id = Date.now;
   }
   countdown() {
-    
+    var now = .getTime();
+    //date year time
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (100 * 60 *60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   }
 
   markComplete() {
