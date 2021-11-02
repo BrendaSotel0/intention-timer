@@ -77,8 +77,8 @@ h4 {
   border: #FFFFFF 3px solid;
   border-radius: 4px;
   background-color: #46424D;
-  width: 100px;
-  height: 52px;
+  width: 120px;
+  height: 60px;
 }
 
 .category-buttons > button > img {
@@ -96,14 +96,15 @@ h4 {
 .accomplish{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border: 5px pink solid;
+  padding-left: 70px;
 }
 
 input{
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFF;
-  width: 100%;
+  width: 125%;
 }
