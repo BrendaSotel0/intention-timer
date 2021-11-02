@@ -14,7 +14,7 @@ Error: #EFB7EC */
 }
 
 header {
-  height: 10%;
+  height: 8%;
   width: 100%;
   background-color: #46424D;
   display: flex;
@@ -75,6 +75,7 @@ h4 {
 }
 .category-buttons > button {
   border: #FFFFFF 3px solid;
+  border-radius: 4px;
   background-color: #46424D;
   width: 100px;
   height: 52px;
@@ -98,4 +99,11 @@ h4 {
   justify-content: center;
   align-items: center;
   border: 5px pink solid;
+}
+
+input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  width: 100%;
 }
