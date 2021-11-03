@@ -89,6 +89,8 @@ h4 {
   align-items: center;
   /* border: 5px solid orange; */
 }
+
+
 .category-buttons > button {
   border: #FFFFFF 3px solid;
   border-radius: 4px;
@@ -124,4 +126,17 @@ input{
   border-bottom: 1px solid #FFF;
   width: 100%;
   padding-top: 7%;
+}
+
+
+.active-study {
+  border: #B3FD78;
+}
+
+
+.active-exercise {
+  border: #FD8078;
+}
+.hidden {
+  display: none;
 }
