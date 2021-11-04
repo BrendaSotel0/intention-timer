@@ -6,8 +6,8 @@ var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
 var activityButtons = document.querySelector("activity-buttons");
-// var buttons = document.querySelector("button");
 var timeInput = document.querySelector(".time");
+var errorMessage = document.querySelector("#errorMessage");
 
 
 
@@ -80,7 +80,7 @@ var invalidChars = [
 function preventButtons() {
   for (var i = 0; i < categoryButtons.length;  i++) {
     if (!categoryButtons[i].classList.contains('activate')) {
-      error message.classList.remove('hidden')
+      errorMessage.classList.remove('hidden')
     })
   }
 }
