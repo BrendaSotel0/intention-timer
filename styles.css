@@ -131,3 +131,19 @@ input{
 .hidden {
   display: none;
 }
+
+.activate-exercise {
+  border: 3px solid #FD8078;
+  color: #FD8078;
+}
+
+.activate-meditate {
+  border: 3px solid #C278FD;
+  color: #C278FD;
+
+}
+
+.activate-study {
+  border: 3px solid #B3FD78;
+  color: #B3FD78;
+}

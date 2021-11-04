@@ -9,48 +9,52 @@ var activityButtons = document.querySelector("activity-buttons");
 var buttons = document.querySelector("button")
 
 
-// meditateButton.addEventListener("click", activateMeditate);
-// exerciseButton.addEventListener("click", activateExercise);
-// studyButton.addEventListener("click", activateStudy);
-categoryButtons.addEventListener("click", function() {
-  activateActivities(event)
-})
-//
-//
-function activateActivities(event) {
-  if (event.target.classList.contains("meditate")) {
-    activateMeditate()
-  } else if (event.target.classList.contains("study")) {
-    activateStudy()
-  } else if (event.target.classList.contains("exercise")) {
-    activateExercise()
-  }
-}
+meditateButton.addEventListener("click", activateMeditate);
+exerciseButton.addEventListener("click", activateExercise);
+studyButton.addEventListener("click", activateStudy);
 
-function activateExercise()  {
-  displayDefaultButtons()
-  exerciseButton.style.border = '3px solid';
-  exerciseButton.style.color = '#FD8078';
-  exerciseIcon.setAttribute('src', 'assets/exercise-active.svg');
-  exerciseIcon.setAttribute('alt', 'active exercise');
-}
+
 
 function activateMeditate() {
-  displayDefaultButtons()
-  meditateButton.style.border = '3px solid';
-  meditateButton.style.color = '#C278FD';
+  meditateButton.classList.add('activate-meditate');
   meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
   meditateIcon.setAttribute('alt', 'active meditate');
+
+  removeStudyClass()
+  removeExerciseClass()
+}
+
+function activateExercise() {
+  exerciseButton.classList.add('activate-exercise')
+  exerciseIcon.setAttribute('src', 'assets/exercise-active.svg');
+  exerciseIcon.setAttribute('alt', 'active exercise');
+
+  removeStudyClass()
+  removeMeditateClass()
 }
 
 function activateStudy() {
-  displayDefaultButtons()
-  studyButton.style.border = '3px solid';
-  studyButton.style.color = '#B3FD78';
+  studyButton.classList.add('activate-study')
   studyIcon.setAttribute('src', 'assets/study-active.svg');
   studyIcon.setAttribute('alt', 'active study');
-}
-function displayDefaultButtons() {
-  buttons.classList.add("activity-buttons")
 
+  removeExerciseClass()
+  removeMeditateClass()
+}
+
+function removeExerciseClass() {
+  exerciseButton.classList.remove('activate-exercise');
+  exerciseIcon.setAttribute('src', 'assets/exercise.svg');
+  exerciseIcon.setAttribute('alt', 'passive exercise');
+}
+function removeMeditateClass() {
+  meditateButton.classList.remove('activate-meditate');
+  meditateIcon.setAttribute('src', 'assets/meditate.svg');
+  meditateIcon.setAttribute('alt', 'passive meditate')
+}
+
+function removeStudyClass() {
+  studyButton.classList.remove('activate-study')
+  studyIcon.setAttribute('src', 'assets/study.svg');
+  studyIcon.setAttribute('alt', 'passive study');
 }
