@@ -6,13 +6,17 @@ var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
 var activityButtons = document.querySelector("activity-buttons");
-var buttons = document.querySelector("button")
+var buttons = document.querySelector("button");
+var timeInput = document.querySelector(".time");
+
 
 
 meditateButton.addEventListener("click", activateMeditate);
 exerciseButton.addEventListener("click", activateExercise);
 studyButton.addEventListener("click", activateStudy);
-
+timeInput.addEventListener("keydown", function() {
+  preventNumInputs(event)
+});
 
 
 function activateMeditate() {
@@ -58,3 +62,17 @@ function removeStudyClass() {
   studyIcon.setAttribute('src', 'assets/study.svg');
   studyIcon.setAttribute('alt', 'passive study');
 }
+
+function preventNumInputs(event) {
+
+var invalidChars = [
+  "-",
+  "+",
+  "e",
+  ".",
+];
+
+  if (invalidChars.includes(event.key)) {
+    event.preventDefault();
+    }
+};
