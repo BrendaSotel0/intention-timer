@@ -6,7 +6,7 @@ var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
 var activityButtons = document.querySelector("activity-buttons");
-var buttons = document.querySelector("button");
+// var buttons = document.querySelector("button");
 var timeInput = document.querySelector(".time");
 
 
@@ -76,3 +76,22 @@ var invalidChars = [
     event.preventDefault();
     }
 };
+
+function preventButtons() {
+  for (var i = 0; i < categoryButtons.length;  i++) {
+    if (!categoryButtons[i].classList.contains('activate')) {
+      error message.classList.remove('hidden')
+    })
+  }
+}
+
+//prevent user from submitting a form without filling out the three inputs
+
+//add the error messages inside the html with a hidden class
+//if button is not clicked then error message
+//if the input for accomplish is empty then error message
+//duplicate for minutes and seconds
+
+//then remove those error messages with some logic
+//we want event listeners
+//
