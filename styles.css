@@ -89,7 +89,9 @@ h4 {
   align-items: center;
   /* border: 5px solid orange; */
 }
-.category-buttons > button {
+
+
+.activity-buttons {
   border: #FFFFFF 3px solid;
   border-radius: 4px;
   background-color: #46424D;
@@ -97,7 +99,7 @@ h4 {
   height: 60px;
 }
 
-.category-buttons > button > img {
+.activity-buttons > img {
   width: 62%;
   height: 62%;
 }
@@ -124,4 +126,24 @@ input{
   border-bottom: 1px solid #FFF;
   width: 100%;
   padding-top: 7%;
+}
+
+.hidden {
+  display: none;
+}
+
+.activate-exercise {
+  border: 3px solid #FD8078;
+  color: #FD8078;
+}
+
+.activate-meditate {
+  border: 3px solid #C278FD;
+  color: #C278FD;
+
+}
+
+.activate-study {
+  border: 3px solid #B3FD78;
+  color: #B3FD78;
 }

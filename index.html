@@ -14,18 +14,22 @@
         <section class="other-new-activity">
           <h4>Select a category:</h4>
           <section class="category-buttons">
-            <button type=button class="study">
-              <img src="assets/study.svg" alt="passive study">
+            <button type=button class="study activity-buttons">
+              <img id="studyIcon" src="assets/study.svg" alt="passive study">
               Study
             </button>
-            <button type=button class="meditate">
-              <img src="assets/meditate.svg" alt="passive meditate">
+            <button type=button class="meditate activity-buttons">
+              <img id="meditateIcon" src="assets/meditate.svg" alt="passive meditate">
               Meditate
             </button>
-            <button type=button class="exercise">
-              <img src="assets/exercise.svg" alt="passive exercise">
+            <button type=button class="exercise activity-buttons">
+              <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
               Exercise
             </button>
+            <div class="button-error-message hidden">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>Please select a category!</p>
+            </div>
           </section>
           <section class="accomplish">
             <form>
@@ -36,6 +40,10 @@
                 <input type="text" name="accomplish-input">
               </div>
             </form>
+            <div class="description-error-message hidden">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>A description is required!</p>
+            </div>
           </section>
           <section class="time">
             <form class="minutes">
@@ -43,17 +51,25 @@
                 <label for="minutes">Minutes</label>
               </div>
               <div class="minutes-input">
-                <input type="text" name="minutes-input">
+                <input type="number" name="minutes-input">
               </div>
             </form>
+            <div class="minutes-error-message hidden">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>Minutes is required!</p>
+            </div>
             <form class="seconds">
               <div class="seconds-title">
                 <label for="seconds">Seconds</label>
               </div>
               <div class="seconds-input">
-                <input type="text" name="seconds-input">
+                <input type="number" name="seconds-input">
               </div>
             </form>
+            <div class="seconds-error-message hidden">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>Seconds is required!</p>
+            </div>
           </section>
         </section>
       </div>
