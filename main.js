@@ -1,22 +1,23 @@
-var activityButtons = document.querySelector(".category-buttons");
+var categoryButtons = document.querySelector(".category-buttons");
 var meditateButton= document.querySelector(".meditate");
 var exerciseButton = document.querySelector(".exercise");
 var studyButton = document.querySelector(".study");
 var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
+var activityButtons = document.querySelector("activity-buttons");
+var buttons = document.querySelector("button")
 
 
 // meditateButton.addEventListener("click", activateMeditate);
 // exerciseButton.addEventListener("click", activateExercise);
 // studyButton.addEventListener("click", activateStudy);
-
-activityButtons.addEventListener("click", function() {
-  activateActivity(event)
-  console.log("YA")
+categoryButtons.addEventListener("click", function() {
+  activateActivities(event)
 })
-
-function activateActivity(event) {
+//
+//
+function activateActivities(event) {
   if (event.target.classList.contains("meditate")) {
     activateMeditate()
   } else if (event.target.classList.contains("study")) {
@@ -27,13 +28,15 @@ function activateActivity(event) {
 }
 
 function activateExercise()  {
+  displayDefaultButtons()
   exerciseButton.style.border = '3px solid';
   exerciseButton.style.color = '#FD8078';
   exerciseIcon.setAttribute('src', 'assets/exercise-active.svg');
   exerciseIcon.setAttribute('alt', 'active exercise');
-
 }
+
 function activateMeditate() {
+  displayDefaultButtons()
   meditateButton.style.border = '3px solid';
   meditateButton.style.color = '#C278FD';
   meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
@@ -41,14 +44,13 @@ function activateMeditate() {
 }
 
 function activateStudy() {
+  displayDefaultButtons()
   studyButton.style.border = '3px solid';
   studyButton.style.color = '#B3FD78';
   studyIcon.setAttribute('src', 'assets/study-active.svg');
   studyIcon.setAttribute('alt', 'active study');
 }
+function displayDefaultButtons() {
+  buttons.classList.add("activity-buttons")
 
-
-//When user clicks button, border  colorwill change
-//1) access the buttons
-//2) create a button  border class for each  buttons
-//3) replace with button click
+}
