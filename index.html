@@ -26,11 +26,11 @@
               <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
               Exercise
             </button>
-            <div class="button-error hidden" id="errorMessage">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Please select a category.</p>
-            </div>
           </section>
+          <div class="button-error error" id="errorMessage">
+            <img src="assets/warning.svg" alt="error-icon">
+            <p>Please select a category.</p>
+          </div>
           <section class="accomplish">
             <form>
               <div class="accomplish-title">
@@ -40,11 +40,11 @@
                 <input type="text" name="accomplish-input">
               </div>
             </form>
-            <div class="description-error hidden" id="errorMessage">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>A description is required.</p>
-            </div>
           </section>
+          <div class="description-error error" id="errorMessage">
+            <img src="assets/warning.svg" alt="error-icon">
+            <p>A description is required.</p>
+          </div>
           <section class="time">
             <form class="minutes">
               <div class="minutes-title">
@@ -54,10 +54,6 @@
                 <input type="number" name="minutes-input">
               </div>
             </form>
-            <div class="minutes-error hidden" id="errorMessage">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Minutes is required.</p>
-            </div>
             <form class="seconds">
               <div class="seconds-title">
                 <label for="seconds">Seconds</label>
@@ -66,11 +62,17 @@
                 <input type="number" name="seconds-input">
               </div>
             </form>
-            <div class="seconds-error hidden" id="errorMessage">
+          </section>
+          <section class="time-error">
+            <div class="seconds-error error" id="errorMessage">
               <img src="assets/warning.svg" alt="error-icon">
               <p>Seconds is required.</p>
             </div>
-          </section>
+            <div class="minutes-error error" id="errorMessage">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>Minutes is required.</p>
+            </div>
+        </section>
         </section>
       </div>
     </section>
