@@ -125,3 +125,22 @@ input{
   width: 100%;
   padding-top: 7%;
 }
+
+/* .countdown-timer{
+  display: flex;
+  align-text: center;
+  justify-content: center;
+} */
+
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 175px;
+  width: 175px;
+  background-color: #46424D;
+  color: #FFF;
+  border-color: solid #46424D;
+  border-radius: 50%;
+  font-size: 17px;
+}
