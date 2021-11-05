@@ -27,7 +27,7 @@
               Exercise
             </button>
           </section>
-          <div class="button-error error" id="errorMessage">
+          <div class="button-error error  hidden" id="errorMessage">
             <img src="assets/warning.svg" alt="error-icon">
             <p>Please select a category.</p>
           </div>
@@ -36,12 +36,12 @@
               <div class="accomplish-title">
                 <label for="accomplish-title">What would you like to accomplish this time?</label>
               </div>
-              <div class="accomplish-input">
+              <div class="accomplish-input" id="accomplishInput">
                 <input type="text" name="accomplish-input">
               </div>
             </form>
           </section>
-          <div class="description-error error" id="errorMessage">
+          <div class="description-error error hidden" id="errorMessage">
             <img src="assets/warning.svg" alt="error-icon">
             <p>A description is required.</p>
           </div>
@@ -54,25 +54,26 @@
                 <input type="number" name="minutes-input">
               </div>
             </form>
+
+
             <form class="seconds">
-              <div class="seconds-title">
                 <label for="seconds">Seconds</label>
-              </div>
-              <div class="seconds-input">
                 <input type="number" name="seconds-input">
-              </div>
-            </form>
+            </form>›
+
+
           </section>
           <section class="time-error">
-            <div class="seconds-error error" id="errorMessage">
+            <div class="seconds-error error hidden" id="errorMessage">
               <img src="assets/warning.svg" alt="error-icon">
               <p>Seconds is required.</p>
             </div>
-            <div class="minutes-error error" id="errorMessage">
+            <div class="minutes-error error hidden" id="errorMessage">
               <img src="assets/warning.svg" alt="error-icon">
               <p>Minutes is required.</p>
             </div>
         </section>
+          <button class="start-activity">Start activity</button>
         </section>
       </div>
     </section>

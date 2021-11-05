@@ -8,6 +8,8 @@ var studyIcon = document.getElementById("studyIcon");
 var activityButtons = document.querySelector("activity-buttons");
 var timeInput = document.querySelector(".time");
 var errorMessage = document.querySelector("#errorMessage");
+var accomplishInput = document.querySelector("#accomplishInput");
+var startButton = document.querySelector(".start-activity");
 
 
 
@@ -17,6 +19,7 @@ studyButton.addEventListener("click", activateStudy);
 timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
+startButton.addEventListener("click", displayAccomplishError)
 
 
 function activateMeditate() {
@@ -77,11 +80,21 @@ var invalidChars = [
     }
 };
 
+
+function displayAccomplishError() {
+  var seconds = document.querySelector(".seconds");
+console.log(seconds.value)
+  if (!accomplishInput.value === "") {
+    accomplishInput.classList.remove('hidden')
+  }
+}
+
+
 function preventButtons() {
   for (var i = 0; i < categoryButtons.length;  i++) {
     if (!categoryButtons[i].classList.contains('activate')) {
       errorMessage.classList.remove('hidden')
-    })
+    }
   }
 }
 
@@ -91,7 +104,3 @@ function preventButtons() {
 //if button is not clicked then error message
 //if the input for accomplish is empty then error message
 //duplicate for minutes and seconds
-
-//then remove those error messages with some logic
-//we want event listeners
-//
