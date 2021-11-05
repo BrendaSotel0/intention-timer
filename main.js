@@ -8,7 +8,10 @@ var studyIcon = document.getElementById("studyIcon");
 var activityButtons = document.querySelector("activity-buttons");
 // var buttons = document.querySelector("button");
 var timeInput = document.querySelector(".time");
-
+var activityButton = document.querySelector(".start-activity");
+var accomplishInput = document.querySelector(".accomp-input").value;
+var minutesInput = document.querySelector(".min-input").value;
+var secondsInput = document.querySelector(".sec-input").value;
 
 
 meditateButton.addEventListener("click", activateMeditate);
@@ -17,11 +20,13 @@ studyButton.addEventListener("click", activateStudy);
 timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
-
+activityButton.addEventListener("click", startActivity);
 
 function activateMeditate() {
   meditateButton.classList.add('activate-meditate');
+  console.log(meditateButton.classList);
   meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
+  console.log(meditateIcon);
   meditateIcon.setAttribute('alt', 'active meditate');
 
   removeStudyClass()
@@ -80,10 +85,36 @@ var invalidChars = [
 function preventButtons() {
   for (var i = 0; i < categoryButtons.length;  i++) {
     if (!categoryButtons[i].classList.contains('activate')) {
-      error message.classList.remove('hidden')
-    })
+      errorMessage.classList.remove('hidden')
+    }
   }
 }
+
+
+function startActivity() {
+  //connect it to the values in the form
+  //connect those values to the activity class
+  //save new instance of activity class to local storage
+  //{"category":{}}
+
+  var freshActivity = new Activity(categoryButtons, accomplishInput, minutesInput, secondsInput);
+
+
+  var saveActivity = JSON.stringify(freshActivity);
+  localStorage.setItem("activity", saveActivity);
+  console.log(freshActivity);
+
+}
+
+
+//A Start Activity button is provided to submit the data entered into the form. When the button is clicked, update your data model with an instance of the Activity class
+
+//create start activity button
+//connect it to the values in the form
+//create instance of activity class using those values
+//add to local storage
+
+
 
 //prevent user from submitting a form without filling out the three inputs
 

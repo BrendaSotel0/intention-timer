@@ -37,7 +37,7 @@
                 <label for="accomplish-title">What would you like to accomplish this time?</label>
               </div>
               <div class="accomplish-input">
-                <input type="text" name="accomplish-input">
+                <input class="accomp-input" type="text" name="ac-input">
               </div>
             </form>
             <div class="description-error-message hidden">
@@ -51,7 +51,7 @@
                 <label for="minutes">Minutes</label>
               </div>
               <div class="minutes-input">
-                <input type="number" name="minutes-input">
+                <input class="min-input" type="number" name="minutes-input">
               </div>
             </form>
             <div class="minutes-error-message hidden">
@@ -63,14 +63,18 @@
                 <label for="seconds">Seconds</label>
               </div>
               <div class="seconds-input">
-                <input type="number" name="seconds-input">
+                <input class="sec-input" type="number" name="seconds-input">
               </div>
             </form>
+
             <div class="seconds-error-message hidden">
               <img src="assets/warning.svg" alt="error-icon">
               <p>Seconds is required!</p>
             </div>
           </section>
+          <div class="activity-button-box">
+            <button class="start-activity">START ACTIVITY</button>
+          </div>
         </section>
       </div>
     </section>
