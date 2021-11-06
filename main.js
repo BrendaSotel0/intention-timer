@@ -83,7 +83,7 @@ var invalidChars = [
 
 function displayAccomplishError() {
   var seconds = document.querySelector(".seconds");
-console.log(seconds.value)
+console.log(seconds)
   if (!accomplishInput.value === "") {
     accomplishInput.classList.remove('hidden')
   }
