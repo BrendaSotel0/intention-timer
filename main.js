@@ -12,11 +12,11 @@ var activityButton = document.querySelector(".start-activity");
 var accomplishInput = document.querySelector(".accomp-input");
 var minutesInput = document.querySelector(".min-input");
 var secondsInput = document.querySelector(".sec-input");
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 var mainPage = document.querySelector(".other-new-activity");
 var timer = document.querySelector(".countdown-timer");
->>>>>>> 97be624a3847ef4ec45c07eef6dc2330bc9c96e4
+// >>>>>>> 97be624a3847ef4ec45c07eef6dc2330bc9c96e4
 
 
 activityButton.addEventListener("click", startActivity);
