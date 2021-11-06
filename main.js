@@ -12,15 +12,21 @@ var activityButton = document.querySelector(".start-activity");
 var accomplishInput = document.querySelector(".accomp-input");
 var minutesInput = document.querySelector(".min-input");
 var secondsInput = document.querySelector(".sec-input");
+<<<<<<< HEAD
+=======
+var mainPage = document.querySelector(".other-new-activity");
+var timer = document.querySelector(".countdown-timer");
+>>>>>>> 97be624a3847ef4ec45c07eef6dc2330bc9c96e4
 
 
+activityButton.addEventListener("click", startActivity);
 meditateButton.addEventListener("click", activateMeditate);
 exerciseButton.addEventListener("click", activateExercise);
 studyButton.addEventListener("click", activateStudy);
 timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
-activityButton.addEventListener("click", startActivity);
+
 
 function activateMeditate() {
   meditateButton.classList.add('activate-meditate');
@@ -92,17 +98,14 @@ function preventButtons() {
 
 
 function startActivity() {
-  //connect it to the values in the form
-  //connect those values to the activity class
-  //save new instance of activity class to local storage
-  //{"category":{}}
+  mainPage.classList.add('hidden');
+  timer.classList.remove('hidden');
 
+  var activityList = [];
   var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
-
-
   var saveActivity = JSON.stringify(freshActivity);
   localStorage.setItem("activity", saveActivity);
-  console.log(freshActivity);
+
 
 }
 

@@ -47,7 +47,7 @@ aside > h3 {
   width: 66%;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 2%;
   /* align-items: center; */
 }
@@ -65,7 +65,7 @@ aside > h3 {
 
 .other-new-activity {
   background-color: #46424D;
-  /* border: 5px solid blue; */
+  border: 1px solid blue;
   height: 85%;
   width: 87%;
   display: flex;
@@ -128,9 +128,7 @@ input{
   padding-top: 7%;
 }
 
-.hidden {
-  display: none;
-}
+
 
 .activate-exercise {
   border: 3px solid #FD8078;
@@ -156,7 +154,30 @@ input{
   border: none;
 }
 
+}
 .activity-button-box{
   display: flex;
   justify-content: flex-end;
+}
+
+.countdown-timer{
+  display: flex;
+  align-text: center;
+  justify-content: center;
+}
+
+.timer{
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+  background-color: #46424D;
+  color: #FFF;
+  /* border-color: solid #46424D; */
+  border-radius: 50%;
+  font-size: 17px;
+}
+.hidden {
+  display: none;
 }
