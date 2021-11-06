@@ -10,11 +10,11 @@
   <main class="main">
     <section class="activity-container">
       <div class="new-activity">
-        <h1>New Activity</h1>
+        <h1 class="box-header">New Activity</h1>
         <section class="other-new-activity">
           <h4>Select a category:</h4>
           <section class="category-buttons">
-            <button type=button class="study activity-buttons">
+            <button type=button class="study activity-buttons" id="study">
               <img id="studyIcon" src="assets/study.svg" alt="passive study">
               Study
             </button>
@@ -76,10 +76,10 @@
             <button class="start-activity">START ACTIVITY</button>
           </div>
         </section>
-        <section class="countdown-timer hidden">
-          <p><h1>Current Activity</h1></p>
-          <p><h1>Category</h1></p>
-          <p>00:00</p>
+        <section class="countdown-timer ">
+          <!-- <h1>Current Activity</h1> -->
+          <h1 class="activity-description">Deep Breathing</h1>
+          <h1 class="time-remaining">00:00</h1>
           <button type=button class="timer">START</button>
         </section>
       </div>

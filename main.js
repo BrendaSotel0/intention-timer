@@ -17,6 +17,8 @@ var secondsInput = document.querySelector(".sec-input");
 var mainPage = document.querySelector(".other-new-activity");
 var timer = document.querySelector(".countdown-timer");
 // >>>>>>> 97be624a3847ef4ec45c07eef6dc2330bc9c96e4
+var boxHeader = document.querySelector(".box-header");
+var studyId = document.querySelector("#study");
 
 
 activityButton.addEventListener("click", startActivity);
@@ -100,15 +102,21 @@ function preventButtons() {
 function startActivity() {
   mainPage.classList.add('hidden');
   timer.classList.remove('hidden');
+  boxHeader.innerText = "Current Activity";
 
   var activityList = [];
   var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
   var saveActivity = JSON.stringify(freshActivity);
   localStorage.setItem("activity", saveActivity);
 
-
+  changeBorderColor();
 }
 
+function changeBorderColor() {
+  if(categoryButtons.studyId === "study") {
+    timer.classList.add("activate-study")
+  }
+}
 
 //A Start Activity button is provided to submit the data entered into the form. When the button is clicked, update your data model with an instance of the Activity class
 
