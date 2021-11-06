@@ -9,9 +9,9 @@ var activityButtons = document.querySelector("activity-buttons");
 // var buttons = document.querySelector("button");
 var timeInput = document.querySelector(".time");
 var activityButton = document.querySelector(".start-activity");
-var accomplishInput = document.querySelector(".accomp-input").value;
-var minutesInput = document.querySelector(".min-input").value;
-var secondsInput = document.querySelector(".sec-input").value;
+var accomplishInput = document.querySelector(".accomp-input");
+var minutesInput = document.querySelector(".min-input");
+var secondsInput = document.querySelector(".sec-input");
 
 
 meditateButton.addEventListener("click", activateMeditate);
@@ -97,7 +97,7 @@ function startActivity() {
   //save new instance of activity class to local storage
   //{"category":{}}
 
-  var freshActivity = new Activity(categoryButtons, accomplishInput, minutesInput, secondsInput);
+  var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
 
 
   var saveActivity = JSON.stringify(freshActivity);
