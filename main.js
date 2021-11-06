@@ -15,11 +15,12 @@ var secondsInput = document.querySelector(".sec-input");
 var mainPage = document.querySelector(".other-new-activity");
 var timer = document.querySelector(".countdown-timer");
 var submitBtn = document.querySelector(".submit");
+var errorMessage = document.querySelector(".error-message")
 
-submitBtn.addEventListener("click", function() {
-  btnErrorMess(event)
+
+activityButton.addEventListener("click", function() {
+  displayBtnError(event)
 });
-activityButton.addEventListener("click", startActivity);
 meditateButton.addEventListener("click", activateMeditate);
 exerciseButton.addEventListener("click", activateExercise);
 studyButton.addEventListener("click", activateStudy);
@@ -29,6 +30,7 @@ timeInput.addEventListener("keydown", function() {
 
 //To combine two functions on same element (i.e. activity button),
 ///use  event delegation!
+
 function activateMeditate() {
   meditateButton.classList.add('activate-meditate');
   meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
@@ -74,7 +76,6 @@ function removeStudyClass() {
 }
 
 function preventNumInputs(event) {
-
 var invalidChars = [
   "-",
   "+",
@@ -85,15 +86,19 @@ var invalidChars = [
   if (invalidChars.includes(event.key)) {
     event.preventDefault();
     }
-};
-
-function btnErrorMess(event) {
-  event.preventDefault()
-  var errorMessage = document.querySelector(".button-error-message")
-    if (!categoryButtons.id) {
-      errorMessage.classList.remove('hidden')
-  }
 }
+
+
+//Goal: Show error message when user does not select necessary elements
+//Input: Lack there of
+//Output: Error message with customized elements
+
+//Access the empty inputs
+//Check to see if they have values
+//If not, pop up the error messages
+
+//Access the error messages
+//
 
 function accomErrorMess(event) {
 var errorMessage = document.querySelector(".description-error-message")
@@ -119,6 +124,14 @@ var errorMessage = document.querySelector(".seconds-error-message")
   }
 }
 
+function displayBtnError(event) {
+  event.preventDefault()
+    if (!categoryButtons.id) {
+      errorMessage.innerHTML += `
+      <img src="assets/warning.svg" alt="error-icon">
+      <p>A category selection is required.</p>`
+  }
+}
 
 
 function startActivity() {
@@ -151,3 +164,7 @@ function startActivity() {
 //then remove those error messages with some logic
 //we want event listeners
 //
+
+
+//JS validation checks
+//.check  .require
