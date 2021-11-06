@@ -5,7 +5,7 @@ var studyButton = document.querySelector(".study");
 var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
-var activityButtons = document.querySelector("activity-buttons");
+// var activityButtons = document.querySelector("activity-buttons");
 // var buttons = document.querySelector("button");
 var timeInput = document.querySelector(".time");
 var activityButton = document.querySelector(".start-activity");
@@ -14,8 +14,11 @@ var minutesInput = document.querySelector(".min-input");
 var secondsInput = document.querySelector(".sec-input");
 var mainPage = document.querySelector(".other-new-activity");
 var timer = document.querySelector(".countdown-timer");
+var submitBtn = document.querySelector(".submit");
 
-
+submitBtn.addEventListener("click", function() {
+  btnErrorMess(event)
+});
 activityButton.addEventListener("click", startActivity);
 meditateButton.addEventListener("click", activateMeditate);
 exerciseButton.addEventListener("click", activateExercise);
@@ -24,12 +27,11 @@ timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
 
-
+//To combine two functions on same element (i.e. activity button),
+///use  event delegation!
 function activateMeditate() {
   meditateButton.classList.add('activate-meditate');
-  console.log(meditateButton.classList);
   meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
-  console.log(meditateIcon);
   meditateIcon.setAttribute('alt', 'active meditate');
 
   removeStudyClass()
@@ -85,13 +87,38 @@ var invalidChars = [
     }
 };
 
-function preventButtons() {
-  for (var i = 0; i < categoryButtons.length;  i++) {
-    if (!categoryButtons[i].classList.contains('activate')) {
+function btnErrorMess(event) {
+  event.preventDefault()
+  var errorMessage = document.querySelector(".button-error-message")
+    if (!categoryButtons.id) {
       errorMessage.classList.remove('hidden')
-    }
   }
 }
+
+function accomErrorMess(event) {
+var errorMessage = document.querySelector(".description-error-message")
+  event.preventDefault()
+  if (!accomplishInput.value) {
+    errorMessage.classList.remove("hidden")
+  }
+}
+
+function minErrorMess(event) {
+var errorMessage = document.querySelector(".minutes-error-message")
+  event.preventDefault()
+  if (!minutesInput.value) {
+    errorMessage.classList.remove("hidden")
+  }
+}
+
+function secErrorMess(event) {
+var errorMessage = document.querySelector(".seconds-error-message")
+  event.preventDefault()
+  if (!secondsInput.value) {
+    errorMessage.classList.remove("hidden")
+  }
+}
+
 
 
 function startActivity() {
@@ -102,8 +129,6 @@ function startActivity() {
   var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
   var saveActivity = JSON.stringify(freshActivity);
   localStorage.setItem("activity", saveActivity);
-
-
 }
 
 
