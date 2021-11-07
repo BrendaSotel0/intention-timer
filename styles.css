@@ -54,7 +54,7 @@ aside > h3 {
 
 .new-activity {
   background-color: #2B2733;
-  /* border: 5px solid blue; */
+  border: 5px solid blue;
   height: 85%;
   width: 96%;
   display: flex;
@@ -78,9 +78,6 @@ aside > h3 {
   font-size: 110%;
 }
 
-h4 {
-  /* margin-left: 14%; */
-}
 
 .category-buttons {
   width: 100%;
@@ -97,6 +94,10 @@ h4 {
   background-color: #46424D;
   width: 120px;
   height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .activity-buttons > img {
@@ -116,11 +117,10 @@ h4 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* border: 5px pink solid; */
-  /* padding-left: 70px; */
 }
 
-input{
+.form-input,
+.accomp-input {
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFF;
@@ -128,23 +128,35 @@ input{
   padding-top: 7%;
 }
 
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance:none;
+}
 
 
-.activate-exercise {
+.exercise:checked + label {
   border: 3px solid #FD8078;
   color: #FD8078;
 }
 
-.activate-meditate {
-  border: 3px solid #C278FD;
-  color: #C278FD;
+
+.meditate:checked + label {
+    border: 3px solid #C278FD;
+     color: #C278FD;
 
 }
 
-.activate-study {
+.study:checked + label {
   border: 3px solid #B3FD78;
   color: #B3FD78;
 }
+
+label > span {
+  font-size: 12px;
+  color: whitesmoke;
+  align-self: baseline;
+}
+
 
 .start-activity{
   color: #46424D;

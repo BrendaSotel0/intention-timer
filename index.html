@@ -1,8 +1,10 @@
 <html>
+
 <head>
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
     <h3>INTENTION TIMER</h3>
@@ -14,18 +16,21 @@
         <section class="other-new-activity">
           <h4>Select a category:</h4>
           <section class="category-buttons">
-            <button type=button class="study activity-buttons">
-              <img id="studyIcon" src="assets/study.svg" alt="passive study">
-              Study
-            </button>
-            <button type=button class="meditate activity-buttons">
+            <div class="activity-buttons meditate">
+              <input type="radio" name="task" id="meditate">
               <img id="meditateIcon" src="assets/meditate.svg" alt="passive meditate">
-              Meditate
-            </button>
-            <button type=button class="exercise activity-buttons">
+              <label for="meditate"><span>Meditate</span></label>
+            </div>
+            <div class="activity-buttons study">
+              <input type="radio" name="task" id="study">
+              <img id="studyIcon" src="assets/study.svg" alt="passive study">
+              <label for="study"><span>Study</span></label>
+            </div>
+            <div class="activity-buttons exercise">
+              <input type="radio" name="task" id="exercise">
               <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
-              Exercise
-            </button>
+              <label for="exercise"><span>exercise</span></label>
+            </div>
             <div class="error-message" id="buttonError"></div>
           </section>
           <section class="accomplish">
@@ -33,7 +38,7 @@
               <div class="accomplish-title">
                 <label for="accomplish-title">What would you like to accomplish this time?</label>
               </div>
-              <div class="accomplish-input">
+              <div class="accomplish-input form-input">
                 <input class="accomp-input" type="text" name="ac-input">
               </div>
             </form>
@@ -45,19 +50,19 @@
                 <label for="minutes">Minutes</label>
               </div>
               <div class="minutes-input">
-                <input class="min-input" type="number" name="minutes-input">
+                <input class="min-input form-input" type="number" name="minutes-input">
               </div>
             </form>
-            <div class="error-message" id="minutesError"</div>
-            <form class="seconds">
-              <div class="seconds-title">
-                <label for="seconds">Seconds</label>
-              </div>
-              <div class="seconds-input">
-                <input class="sec-input" type="number" name="seconds-input">
-              </div>
-            </form>
-            <div class="error-message" id="secondsError"></div>
+            <div class="error-message" id="minutesError" </div>
+              <form class="seconds">
+                <div class="seconds-title">
+                  <label for="seconds">Seconds</label>
+                </div>
+                <div class="seconds-input">
+                  <input class="sec-input form-input" type="number" name="seconds-input">
+                </div>
+              </form>
+              <div class="error-message" id="secondsError"></div>
           </section>
           <div class="activity-button-box">
             <button class="start-activity">START ACTIVITY</button>
@@ -70,12 +75,15 @@
       </div>
     </section>
     <aside class="past-activities">
-        <h3>Past Activies</h3>
-        <center><h5>You haven't logged any activities yet.</h5>
-        <h5>Complete the form to the left to get started!</h5></center>
+      <h3>Past Activies</h3>
+      <center>
+        <h5>You haven't logged any activities yet.</h5>
+        <h5>Complete the form to the left to get started!</h5>
+      </center>
     </aside>
   </main>
 </body>
 <script type="text/javascript" src="Activity.js"></script>
 <script type="text/javascript" src="main.js"></script>
+
 </html>
