@@ -6,7 +6,6 @@ var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
 // var activityButtons = document.querySelector("activity-buttons");
-// var buttons = document.querySelector("button");
 var timeInput = document.querySelector(".time");
 var activityButton = document.querySelector(".start-activity");
 var accomplishInput = document.querySelector(".accomp-input");
@@ -24,57 +23,62 @@ var secError = document.getElementById("secondsError");
 
 
 activityButton.addEventListener("click", checkInputField);
-meditateButton.addEventListener("click", activateMeditate);
-exerciseButton.addEventListener("click", activateExercise);
-studyButton.addEventListener("click", activateStudy);
+categoryButtons.addEventListener("click", selectButton)
+// meditateButton.addEventListener("click", activateMeditate);
+// exerciseButton.addEventListener("click", activateExercise);
+// studyButton.addEventListener("click", activateStudy);
 timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
 
 
-function activateMeditate() {
-  meditateButton.classList.add('activate-meditate');
-  meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
-  meditateIcon.setAttribute('alt', 'active meditate');
-
-  removeStudyClass()
-  removeExerciseClass()
+function selectButton() {
+  console.log(categoryButtons.id)
 }
-
-function activateExercise() {
-  exerciseButton.classList.add('activate-exercise')
-  exerciseIcon.setAttribute('src', 'assets/exercise-active.svg');
-  exerciseIcon.setAttribute('alt', 'active exercise');
-
-  removeStudyClass()
-  removeMeditateClass()
-}
-
-function activateStudy() {
-  studyButton.classList.add('activate-study')
-  studyIcon.setAttribute('src', 'assets/study-active.svg');
-  studyIcon.setAttribute('alt', 'active study');
-
-  removeExerciseClass()
-  removeMeditateClass()
-}
-
-function removeExerciseClass() {
-  exerciseButton.classList.remove('activate-exercise');
-  exerciseIcon.setAttribute('src', 'assets/exercise.svg');
-  exerciseIcon.setAttribute('alt', 'passive exercise');
-}
-function removeMeditateClass() {
-  meditateButton.classList.remove('activate-meditate');
-  meditateIcon.setAttribute('src', 'assets/meditate.svg');
-  meditateIcon.setAttribute('alt', 'passive meditate')
-}
-
-function removeStudyClass() {
-  studyButton.classList.remove('activate-study')
-  studyIcon.setAttribute('src', 'assets/study.svg');
-  studyIcon.setAttribute('alt', 'passive study');
-}
+//
+// function activateMeditate() {
+//   meditateButton.classList.add('activate-meditate');
+//   meditateIcon.setAttribute('src', 'assets/meditate-active.svg');
+//   meditateIcon.setAttribute('alt', 'active meditate');
+//
+//   removeStudyClass()
+//   removeExerciseClass()
+// }
+//
+// function activateExercise() {
+//   exerciseButton.classList.add('activate-exercise')
+//   exerciseIcon.setAttribute('src', 'assets/exercise-active.svg');
+//   exerciseIcon.setAttribute('alt', 'active exercise');
+//
+//   removeStudyClass()
+//   removeMeditateClass()
+// }
+//
+// function activateStudy() {
+//   studyButton.classList.add('activate-study')
+//   studyIcon.setAttribute('src', 'assets/study-active.svg');
+//   studyIcon.setAttribute('alt', 'active study');
+//
+//   removeExerciseClass()
+//   removeMeditateClass()
+// }
+//
+// function removeExerciseClass() {
+//   exerciseButton.classList.remove('activate-exercise');
+//   exerciseIcon.setAttribute('src', 'assets/exercise.svg');
+//   exerciseIcon.setAttribute('alt', 'passive exercise');
+// }
+// function removeMeditateClass() {
+//   meditateButton.classList.remove('activate-meditate');
+//   meditateIcon.setAttribute('src', 'assets/meditate.svg');
+//   meditateIcon.setAttribute('alt', 'passive meditate')
+// }
+//
+// function removeStudyClass() {
+//   studyButton.classList.remove('activate-study')
+//   studyIcon.setAttribute('src', 'assets/study.svg');
+//   studyIcon.setAttribute('alt', 'passive study');
+// }
 
 function preventNumInputs(event) {
 var invalidChars = [
@@ -91,7 +95,7 @@ var invalidChars = [
 
 function checkInputField() {
   for (var i = 0; i < errorMessage.length; i++) {
-    if (!errorMessage[i].value || !categoryButtons.id) {
+    if (!errorMessage[i].value || !categoryButtons.checked) {
       displayErrorMessages(event)
     } else {
       startActivity()
@@ -105,7 +109,7 @@ function displayErrorMessages(event) {
   if (!accomplishInput.value) {
     accomError.innerHTML = `
     <img src="assets/warning.svg" alt="error-icon">
-    <p>A description is required!</p>`
+    <p>A description is required.</p>`
   } else if (!minutesInput.value) {
     minError.innerHTML = `
     <img src="assets/warning.svg" alt="error-icon">
@@ -114,7 +118,7 @@ function displayErrorMessages(event) {
     secError.innerHTML = `
     <img src="assets/warning.svg" alt="error-icon">
     <p>A seconds is required.</p>`
-  } else if (!categoryButtons.id) {
+  } else if (!categoryButtons.checked) {
         btnError.innerHTML = `
         <img src="assets/warning.svg" alt="error-icon">
         <p>A category selection is required.</p>`
