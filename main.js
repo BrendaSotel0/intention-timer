@@ -15,12 +15,15 @@ var secondsInput = document.querySelector(".sec-input");
 var mainPage = document.querySelector(".other-new-activity");
 var timer = document.querySelector(".countdown-timer");
 var submitBtn = document.querySelector(".submit");
-var errorMessage = document.querySelector(".error-message")
+var errorMessage = document.querySelectorAll(".error-message");
+var btnError = document.getElementById("buttonError");
+var accomError = document.getElementById("accomError");
+var minError = document.getElementById("minutesError");
+var secError = document.getElementById("secondsError");
 
 
-activityButton.addEventListener("click", function() {
-  displayBtnError(event)
-});
+
+activityButton.addEventListener("click", checkInputField);
 meditateButton.addEventListener("click", activateMeditate);
 exerciseButton.addEventListener("click", activateExercise);
 studyButton.addEventListener("click", activateStudy);
@@ -28,8 +31,6 @@ timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
 
-//To combine two functions on same element (i.e. activity button),
-///use  event delegation!
 
 function activateMeditate() {
   meditateButton.classList.add('activate-meditate');
@@ -88,6 +89,48 @@ var invalidChars = [
     }
 }
 
+function checkInputField() {
+  for (var i = 0; i < errorMessage.length; i++) {
+    if (!errorMessage[i].value || !categoryButtons.id) {
+      displayErrorMessages(event)
+    } else {
+      startActivity()
+    }
+  }
+}
+
+function displayErrorMessages(event) {
+  event.preventDefault()
+
+  if (!accomplishInput.value) {
+    accomError.innerHTML = `
+    <img src="assets/warning.svg" alt="error-icon">
+    <p>A description is required!</p>`
+  } else if (!minutesInput.value) {
+    minError.innerHTML = `
+    <img src="assets/warning.svg" alt="error-icon">
+    <p>Minutes is required.</p>`
+  } else if (!secondsInput.value) {
+    secError.innerHTML = `
+    <img src="assets/warning.svg" alt="error-icon">
+    <p>A seconds is required.</p>`
+  } else if (!categoryButtons.id) {
+        btnError.innerHTML = `
+        <img src="assets/warning.svg" alt="error-icon">
+        <p>A category selection is required.</p>`
+  }
+}
+
+function startActivity() {
+  mainPage.classList.add('hidden');
+  timer.classList.remove('hidden');
+
+  var activityList = [];
+  var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
+  var saveActivity = JSON.stringify(freshActivity);
+  localStorage.setItem("activity", saveActivity);
+}
+
 
 //Goal: Show error message when user does not select necessary elements
 //Input: Lack there of
@@ -100,49 +143,7 @@ var invalidChars = [
 //Access the error messages
 //
 
-function accomErrorMess(event) {
-var errorMessage = document.querySelector(".description-error-message")
-  event.preventDefault()
-  if (!accomplishInput.value) {
-    errorMessage.classList.remove("hidden")
-  }
-}
 
-function minErrorMess(event) {
-var errorMessage = document.querySelector(".minutes-error-message")
-  event.preventDefault()
-  if (!minutesInput.value) {
-    errorMessage.classList.remove("hidden")
-  }
-}
-
-function secErrorMess(event) {
-var errorMessage = document.querySelector(".seconds-error-message")
-  event.preventDefault()
-  if (!secondsInput.value) {
-    errorMessage.classList.remove("hidden")
-  }
-}
-
-function displayBtnError(event) {
-  event.preventDefault()
-    if (!categoryButtons.id) {
-      errorMessage.innerHTML += `
-      <img src="assets/warning.svg" alt="error-icon">
-      <p>A category selection is required.</p>`
-  }
-}
-
-
-function startActivity() {
-  mainPage.classList.add('hidden');
-  timer.classList.remove('hidden');
-
-  var activityList = [];
-  var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
-  var saveActivity = JSON.stringify(freshActivity);
-  localStorage.setItem("activity", saveActivity);
-}
 
 
 //A Start Activity button is provided to submit the data entered into the form. When the button is clicked, update your data model with an instance of the Activity class

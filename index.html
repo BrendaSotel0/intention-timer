@@ -13,7 +13,6 @@
         <h1>New Activity</h1>
         <section class="other-new-activity">
           <h4>Select a category:</h4>
-          <button type="button" id="yellow">I AM A BUTTON</button>
           <section class="category-buttons">
             <button type=button class="study activity-buttons">
               <img id="studyIcon" src="assets/study.svg" alt="passive study">
@@ -27,10 +26,7 @@
               <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
               Exercise
             </button>
-            <div class="error-message">
-              <!-- <img src="assets/warning.svg" alt="error-icon"> -->
-              <!-- <p>Please select a category!</p> -->
-            </div>
+            <div class="error-message" id="buttonError"></div>
           </section>
           <section class="accomplish">
             <form>
@@ -41,10 +37,7 @@
                 <input class="accomp-input" type="text" name="ac-input">
               </div>
             </form>
-            <div class="description-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>A description is required!</p>
-            </div>
+            <div class="error-message" id="accomError"></div>
           </section>
           <section class="time">
             <form class="minutes">
@@ -55,10 +48,7 @@
                 <input class="min-input" type="number" name="minutes-input">
               </div>
             </form>
-            <div class="minutes-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Minutes is required!</p>
-            </div>
+            <div class="error-message" id="minutesError"</div>
             <form class="seconds">
               <div class="seconds-title">
                 <label for="seconds">Seconds</label>
@@ -67,10 +57,7 @@
                 <input class="sec-input" type="number" name="seconds-input">
               </div>
             </form>
-            <div class="seconds-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Seconds is required!</p>
-            </div>
+            <div class="error-message" id="secondsError"></div>
           </section>
           <div class="activity-button-box">
             <button class="start-activity">START ACTIVITY</button>
