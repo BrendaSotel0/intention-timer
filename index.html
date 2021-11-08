@@ -1,94 +1,80 @@
 <html>
+
 <head>
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
     <h3>INTENTION TIMER</h3>
   </header>
   <main class="main">
     <section class="activity-container">
-      <div class="new-activity">
-        <h1>New Activity</h1>
-        <section class="other-new-activity">
-          <h4>Select a category:</h4>
-          <section class="category-buttons">
-            <button type=button class="study activity-buttons">
-              <img id="studyIcon" src="assets/study.svg" alt="passive study">
-              Study
-            </button>
-            <button type=button class="meditate activity-buttons">
-              <img id="meditateIcon" src="assets/meditate.svg" alt="passive meditate">
-              Meditate
-            </button>
-            <button type=button class="exercise activity-buttons">
-              <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
-              Exercise
-            </button>
-            <div class="button-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Please select a category!</p>
-            </div>
-          </section>
-          <section class="accomplish">
-            <form>
-              <div class="accomplish-title">
-                <label for="accomplish-title">What would you like to accomplish this time?</label>
-              </div>
-              <div class="accomplish-input">
-                <input class="accomp-input" type="text" name="ac-input">
-              </div>
-            </form>
-            <div class="description-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>A description is required!</p>
-            </div>
-          </section>
-          <section class="time">
-            <form class="minutes">
-              <div class="minutes-title">
-                <label for="minutes">Minutes</label>
-              </div>
-              <div class="minutes-input">
-                <input class="min-input" type="number" name="minutes-input">
-              </div>
-            </form>
-            <div class="minutes-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Minutes is required!</p>
-            </div>
-            <form class="seconds">
-              <div class="seconds-title">
-                <label for="seconds">Seconds</label>
-              </div>
-              <div class="seconds-input">
-                <input class="sec-input" type="number" name="seconds-input">
-              </div>
-            </form>
-
-            <div class="seconds-error-message hidden">
-              <img src="assets/warning.svg" alt="error-icon">
-              <p>Seconds is required!</p>
-            </div>
-          </section>
-          <div class="activity-button-box">
-            <button class="start-activity">START ACTIVITY</button>
+      <h1>New Activity</h1>
+      <section class="select-activity">
+        <h4>Select a category:</h4>
+        <section class="category-buttons">
+          <button type=button class="study activity-buttons">
+            <img id="studyIcon" src="assets/study.svg" alt="passive study">
+            Study
+          </button>
+          <button type=button class="meditate activity-buttons">
+            <img id="meditateIcon" src="assets/meditate.svg" alt="passive meditate">
+            Meditate
+          </button>
+          <button type=button class="exercise activity-buttons">
+            <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
+            Exercise
+          </button>
+          <div class="button-error-message hidden">
+            <img src="assets/warning.svg" alt="error-icon">
+            <p>Please select a category!</p>
           </div>
         </section>
-        <section class="countdown-timer hidden">
-          <p>00:00</p>
-          <button type=button class="timer">START</button>
+          <form class="accomplish">
+              <label for="accomplish-title">What would you like to accomplish this time?</label>
+              <input class="accomplish-input" type="text" name="ac-input">
+          <div class="description-error-message hidden">
+            <img src="assets/warning.svg" alt="error-icon">
+            <p>A description is required!</p>
+          </div>
+        </form>
+        <section class="time">
+          <form class="minutes">
+              <label for="minutes">Minutes</label>
+              <input class="minutes-input" type="number" name="minutes-input">
+              <div class="minutes-error-message hidden">
+                <img src="assets/warning.svg" alt="error-icon">
+                <p>Minutes is required!</p>
+              </div>
+          </form>
+          <form class="seconds">
+              <label for="seconds">Seconds</label>
+              <input class="seconds-input" type="number" name="seconds-input">
+              <div class="seconds-error-message hidden">
+                <img src="assets/warning.svg" alt="error-icon">
+                <p>Seconds is required!</p>
+              </div>
+          </form>
         </section>
-      </div>
+        <button class="start-activity">START ACTIVITY</button>
+      </section>
+      <section class="countdown-timer hidden">
+        <p>00:00</p>
+        <button type=button class="timer">START</button>
+      </section>
     </section>
     <aside class="past-activities">
-        <h3>Past Activies</h3>
-        <center><h5>You haven't logged any activities yet.</h5>
-        <h5>Complete the form to the left to get started!</h5></center>
+      <h3>Past Activies</h3>
+      <center>
+        <h5>You haven't logged any activities yet.</h5>
+        <h5>Complete the form to the left to get started!</h5>
+      </center>
     </aside>
   </main>
 </body>
 <script type="text/javascript" src="Activity.js"></script>
 <script type="text/javascript" src="main.js"></script>
+
 </html>

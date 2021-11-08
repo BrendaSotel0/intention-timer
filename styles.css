@@ -1,12 +1,8 @@
-/* Main background: #2B2733
-Text on main background: #CBC9CF
-Header, cards: #46424D
-Card shadow: #26222D
-Text on header and cards: #FFF
-Study: #B3FD78
-Meditate: #C278FD
-Exercise: #FD8078
-Error: #EFB7EC */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -43,51 +39,36 @@ aside > h3 {
   margin-left: 5%;
 }
 
-.activity-container {
-  width: 66%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  padding-left: 2%;
-  /* align-items: center; */
-}
 
-.new-activity {
-  background-color: #2B2733;
-  /* border: 5px solid blue; */
+.activity-container {
   height: 85%;
   width: 96%;
+  padding-left: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 
-.other-new-activity {
+.select-activity {
   background-color: #46424D;
-  border: 1px solid blue;
   height: 85%;
-  width: 87%;
+  width: 93%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* align-items: flex-start; */
-  padding: 0em 2em 0em 6em;
+  padding-left: 2%;
+  padding-right: 2%;
   border-radius: 1%;
   box-shadow: 5px 5px #26222D;
   font-size: 110%;
 }
 
-h4 {
-  /* margin-left: 14%; */
-}
-
 .category-buttons {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  /* border: 5px solid orange; */
 }
 
 
@@ -104,23 +85,8 @@ h4 {
   height: 62%;
 }
 
-.time {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  /* border: purple solid 5px; */
-}
 
-.accomplish{
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  /* border: 5px pink solid; */
-  /* padding-left: 70px; */
-}
-
-input{
+input {
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFF;
@@ -128,6 +94,60 @@ input{
   padding-top: 7%;
 }
 
+.accomplish{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accomplish > label {
+  align-self: flex-start;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.minutes,
+.accomplish {
+  margin-left: 8%;
+}
+
+.seconds,
+.start-activity {
+  margin-right: 11%;
+}
+
+.start-activity {
+  color: #46424D;
+  height: 30px;
+  width: 159px;
+  border-radius: 5px;
+  border: none;
+  align-self: flex-end;
+}
+
+.countdown-timer{
+  display: flex;
+  align-text: center;
+  justify-content: center;
+}
+
+.timer{
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: #46424D;
+  color: #FFF;
+  border-radius: 50%;
+  font-size: 17px;
+}
 
 
 .activate-exercise {
@@ -146,38 +166,6 @@ input{
   color: #B3FD78;
 }
 
-.start-activity{
-  color: #46424D;
-  height: 30px;
-  width: 159px;
-  border-radius: 5px;
-  border: none;
-}
-
-}
-.activity-button-box{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.countdown-timer{
-  display: flex;
-  align-text: center;
-  justify-content: center;
-}
-
-.timer{
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-
-  background-color: #46424D;
-  color: #FFF;
-  /* border-color: solid #46424D; */
-  border-radius: 50%;
-  font-size: 17px;
-}
 .hidden {
   display: none;
 }
