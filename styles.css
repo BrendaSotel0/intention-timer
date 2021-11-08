@@ -64,6 +64,10 @@ aside > h3 {
   font-size: 110%;
 }
 
+h4 {
+  margin-bottom: -3%;
+}
+
 .category-buttons {
   width: 100%;
   display: flex;
@@ -114,7 +118,8 @@ input {
 }
 
 .minutes,
-.accomplish {
+.accomplish,
+h4 {
   margin-left: 8%;
 }
 
