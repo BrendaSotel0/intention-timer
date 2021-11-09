@@ -9,6 +9,73 @@
   </header>
   <main class="main">
     <section class="activity-container">
+ feature/form-functionality
+      <div class="new-activity">
+        <h1>New Activity</h1>
+        <section class="other-new-activity">
+          <h4>Select a category:</h4>
+          <section class="category-buttons">
+            <button type=button class="study activity-buttons">
+              <img id="studyIcon" src="assets/study.svg" alt="passive study">
+              Study
+            </button>
+            <button type=button class="meditate activity-buttons">
+              <img id="meditateIcon" src="assets/meditate.svg" alt="passive meditate">
+              Meditate
+            </button>
+            <button type=button class="exercise activity-buttons">
+              <img id="exerciseIcon" src="assets/exercise.svg" alt="passive exercise">
+              Exercise
+            </button>
+          </section>
+          <div class="button-error error  hidden" id="errorMessage">
+            <img src="assets/warning.svg" alt="error-icon">
+            <p>Please select a category.</p>
+          </div>
+          <section class="accomplish">
+            <form>
+              <div class="accomplish-title">
+                <label for="accomplish-title">What would you like to accomplish this time?</label>
+              </div>
+              <div class="accomplish-input" id="accomplishInput">
+                <input type="text" name="accomplish-input">
+              </div>
+            </form>
+          </section>
+          <div class="description-error error hidden" id="errorMessage">
+            <img src="assets/warning.svg" alt="error-icon">
+            <p>A description is required.</p>
+          </div>
+          <section class="time">
+            <form class="minutes">
+              <div class="minutes-title">
+                <label for="minutes">Minutes</label>
+              </div>
+              <div class="minutes-input">
+                <input type="number" name="minutes-input">
+              </div>
+            </form>
+
+
+            <form class="seconds">
+                <label for="seconds">Seconds</label>
+                <input type="number" name="seconds-input">
+            </form>›
+
+
+          </section>
+          <section class="time-error">
+            <div class="seconds-error error hidden" id="errorMessage">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>Seconds is required.</p>
+            </div>
+            <div class="minutes-error error hidden" id="errorMessage">
+              <img src="assets/warning.svg" alt="error-icon">
+              <p>Minutes is required.</p>
+            </div>
+        </section>
+          <button class="start-activity">Start activity</button>
+
       <h1>New Activity</h1>
       <section class="select-activity">
         <h4>Select a category:</h4>
@@ -55,6 +122,7 @@
                 <p>Seconds is required!</p>
               </div>
           </form>
+ main
         </section>
         <button class="start-activity">START ACTIVITY</button>
       </section>
