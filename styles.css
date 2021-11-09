@@ -128,29 +128,48 @@ aside > h3 {
   padding-top: 7%;
 }
 
-input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance:none;
+
+.timer{
+  border: 3px solid pink;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  width: 175px;
+  height: 175px;
+  background-color: #46424D;
+  color: #FFF;
+  /* border-color: solid #46424D; */
+  border-radius: 50%;
+  font-size: 17px;
 }
 
-
-.exercise:checked + label {
-  border: 3px solid #FD8078;
-  color: #FD8078;
+.countdown-timer{
+  align-text: center;
+  background-color: #46424D;
+  /* border: 1px solid blue; */
+  height: 85%;
+  width: 87%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  padding: 0em 2em 0em 4em;
+  border-radius: 1%;
+  box-shadow: 5px 5px #26222D;
+  font-size: 110%;
 }
 
-
-.meditate:checked + label {
-    border: 3px solid #C278FD;
-     color: #C278FD;
-
+.time-remaining {
+  font-weight: 400;
+  font-size: 50px;
+  margin-top: 2px
 }
 
-.study:checked + label {
-  border: 3px solid #B3FD78;
-  color: #B3FD78;
+.activity-description {
+  margin-bottom: 0px;
+  padding-top: 50px;
 }
-
 
 .start-activity{
   color: #46424D;
@@ -166,24 +185,7 @@ input[type="radio"] {
   justify-content: flex-end;
 }
 
-.countdown-timer{
-  display: flex;
-  align-text: center;
-  justify-content: center;
-}
 
-.timer{
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-
-  background-color: #46424D;
-  color: #FFF;
-  /* border-color: solid #46424D; */
-  border-radius: 50%;
-  font-size: 17px;
-}
 .hidden {
   display: none;
 }

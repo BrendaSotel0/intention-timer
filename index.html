@@ -12,12 +12,15 @@
   <main class="main">
     <section class="activity-container">
       <div class="new-activity">
-        <h1>New Activity</h1>
+        <h1 class="box-header">New Activity</h1>
         <section class="other-new-activity">
           <h4>Select a category:</h4>
           <section class="category-buttons">
-            <div class="activity-buttons meditate">
-              <input type="radio" name="task" id="meditate">
+            <button type=button class="study activity-buttons" id="study">
+              <img id="studyIcon" src="assets/study.svg" alt="passive study">
+              Study
+            </button>
+            <button type=button class="meditate activity-buttons">
               <img id="meditateIcon" src="assets/meditate.svg" alt="passive meditate">
               <label for="meditate"><span>Meditate</span></label>
             </div>
@@ -68,8 +71,10 @@
             <button class="start-activity">START ACTIVITY</button>
           </div>
         </section>
-        <section class="countdown-timer hidden">
-          <p>00:00</p>
+        <section class="countdown-timer ">
+          <!-- <h1>Current Activity</h1> -->
+          <h1 class="activity-description">Deep Breathing</h1>
+          <h1 class="time-remaining">00:00</h1>
           <button type=button class="timer">START</button>
         </section>
       </div>

@@ -13,7 +13,6 @@ var minutesInput = document.querySelector(".min-input");
 var secondsInput = document.querySelector(".sec-input");
 var mainPage = document.querySelector(".other-new-activity");
 var timer = document.querySelector(".countdown-timer");
-var submitBtn = document.querySelector(".submit");
 var errorMessage = document.querySelectorAll(".error-message");
 var btnError = document.getElementById("buttonError");
 var accomError = document.getElementById("accomError");
@@ -128,6 +127,7 @@ function displayErrorMessages(event) {
 function startActivity() {
   mainPage.classList.add('hidden');
   timer.classList.remove('hidden');
+  boxHeader.innerText = "Current Activity";
 
   var activityList = [];
   var freshActivity = new Activity(categoryButtons.id, accomplishInput.value, minutesInput.value, secondsInput.value);
@@ -148,7 +148,11 @@ function startActivity() {
 //
 
 
-
+function changeBorderColor() {
+  if(categoryButtons.studyId === "study") {
+    timer.classList.add("activate-study")
+  }
+}
 
 //A Start Activity button is provided to submit the data entered into the form. When the button is clicked, update your data model with an instance of the Activity class
 
