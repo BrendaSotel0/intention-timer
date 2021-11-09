@@ -40,6 +40,7 @@ aside > h3 {
 }
 
 
+
 .activity-container {
   height: 85%;
   width: 96%;
@@ -64,8 +65,9 @@ aside > h3 {
   font-size: 110%;
 }
 
+
 h4 {
-  margin-bottom: -3%;
+  margin-bottom: 1%;
 }
 
 .category-buttons {
@@ -126,8 +128,48 @@ h4 {
 .seconds,
 .start-activity {
   margin-right: 11%;
+
+.timer-from-main{
+  border: 3px solid pink;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  width: 175px;
+  height: 175px;
+  background-color: #46424D;
+  color: #FFF;
+/*   /* border-color: solid #46424D; */
+/*   border-radius: 50%; */
+  font-size: 17px;
 }
 
+.countdown-timer{
+  align-text: center;
+  background-color: #46424D;
+  height: 85%;
+  width: 87%;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  padding: 0em 2em 0em 4em;
+  border-radius: 1%;
+  box-shadow: 5px 5px #26222D;
+  font-size: 110%;
+}
+
+.time-remaining {
+  font-weight: 400;
+  font-size: 50px;
+  margin-top: 2px
+}
+
+.activity-description {
+  margin-bottom: 0px;
+  padding-top: 50px;
+  }
+ 
 .start-activity {
   color: #46424D;
   height: 30px;
@@ -135,12 +177,6 @@ h4 {
   border-radius: 5px;
   border: none;
   align-self: flex-end;
-}
-
-.countdown-timer{
-  display: flex;
-  align-text: center;
-  justify-content: center;
 }
 
 .timer{
