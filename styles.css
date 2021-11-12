@@ -1,48 +1,3 @@
-<section class="time">
-         <form class="minutes">
-             <label for="minutes">Minutes</label>
-             <input class="minutes-input" type="number" name="minutes-input">
-             <div class="minutes-error-message hidden">
-               <img src="assets/warning.svg" alt="error-icon">
-               <p>Minutes is required!</p>
-             </div>
-         </form>
-         <form class="seconds">
-             <label for="seconds">Seconds</label>
-             <input class="seconds-input" type="number" name="seconds-input">
-             <div class="seconds-error-message hidden">
-               <img src="assets/warning.svg" alt="error-icon">
-               <p>Seconds is required!</p>
-             </div>
-         </form>
-       </section>
-       <button class="start-activity">START ACTIVITY</button>
-     </section>
-     <section class="countdown-timer hidden">
-       <p>00:00</p>
-       <button type=button class="timer">START</button>
-     </section>
-   </section>
-   <aside class="past-activities">
-     <h3>Past Activies</h3>
-     <center>
-       <h5>You haven't logged any activities yet.</h5>
-       <h5>Complete the form to the left to get started.</h5>
-     </center>
-   </aside>
- </main>
-</body>
-<script type="text/javascript" src="Activity.js"></script>
-<script type="text/javascript" src="main.js"></script>
-
-</html>
-
-
-
-
-
-
-
 html, body {
  width: 100%;
  height: 100%;
@@ -182,13 +137,13 @@ h4 {
  align-self: flex-end;
 }
 
-.countdown-timer{
+.countdown-timer {
  display: flex;
  align-text: center;
  justify-content: center;
 }
 
-.timer{
+.timer {
  border: 1px solid red;
  display: flex;
  justify-content: center;

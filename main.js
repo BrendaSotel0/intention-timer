@@ -1,19 +1,17 @@
 var categoryButtons = document.querySelector(".category-buttons");
-var meditateButton= document.querySelector(".meditate");
-var exerciseButton = document.querySelector(".exercise");
-var studyButton = document.querySelector(".study");
+var meditateButton =document.getElementById("meditate")
+var exerciseButton = document.getElementById("exercise")
+var studyButton = document.getElementById("study");
 var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
- feature/form-functionality
 var activityButtons = document.querySelector("activity-buttons");
 var timeInput = document.querySelector(".time");
 var errorMessage = document.querySelector("#errorMessage");
-var accomplishInput = document.querySelector("#accomplishInput");
+var accomplishInput = document.getElementById("accomplishInput");
+var minInput = document.getElementById("minInput");
+var secInput =  document.getElementById("secInput");
 var startButton = document.querySelector(".start-activity");
-
-
-
 
 meditateButton.addEventListener("click", activateMeditate);
 exerciseButton.addEventListener("click", activateExercise);
@@ -21,7 +19,7 @@ studyButton.addEventListener("click", activateStudy);
 timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
-startButton.addEventListener("click", displayAccomplishError)
+startButton.addEventListener("click", checkInputField)
 
 
 function activateMeditate() {
@@ -83,21 +81,10 @@ var invalidChars = [
 }
 
 function checkInputField() {
-  for (var i = 0; i < errorMessage.length; i++) {
-    if (!errorMessage[i].value || !categoryButtons.checked) {
+    if (!accomplishInput.value || !minInput.value || !secInput.value) {
       displayErrorMessages(event)
     } else {
       startActivity()
-    }
-  }
-}
-
-
-function displayAccomplishError() {
-  var seconds = document.querySelector(".seconds");
-console.log(seconds)
-  if (!accomplishInput.value === "") {
-    accomplishInput.classList.remove('hidden')
   }
 }
 
@@ -106,6 +93,8 @@ function preventButtons() {
   for (var i = 0; i < categoryButtons.length;  i++) {
     if (!categoryButtons[i].classList.contains('activate')) {
       errorMessage.classList.remove('hidden')
+    }
+  }
 }
 
 function displayErrorMessages(event) {
@@ -115,11 +104,11 @@ function displayErrorMessages(event) {
     accomError.innerHTML = `
     <img src="assets/warning.svg" alt="error-icon">
     <p>A description is required.</p>`
-  } else if (!minutesInput.value) {
+  } else if (!minInput.value) {
     minError.innerHTML = `
     <img src="assets/warning.svg" alt="error-icon">
     <p>Minutes is required.</p>`
-  } else if (!secondsInput.value) {
+  } else if (!secInput.value) {
     secError.innerHTML = `
     <img src="assets/warning.svg" alt="error-icon">
     <p>A seconds is required.</p>`
