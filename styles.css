@@ -1,176 +1,221 @@
+<section class="time">
+         <form class="minutes">
+             <label for="minutes">Minutes</label>
+             <input class="minutes-input" type="number" name="minutes-input">
+             <div class="minutes-error-message hidden">
+               <img src="assets/warning.svg" alt="error-icon">
+               <p>Minutes is required!</p>
+             </div>
+         </form>
+         <form class="seconds">
+             <label for="seconds">Seconds</label>
+             <input class="seconds-input" type="number" name="seconds-input">
+             <div class="seconds-error-message hidden">
+               <img src="assets/warning.svg" alt="error-icon">
+               <p>Seconds is required!</p>
+             </div>
+         </form>
+       </section>
+       <button class="start-activity">START ACTIVITY</button>
+     </section>
+     <section class="countdown-timer hidden">
+       <p>00:00</p>
+       <button type=button class="timer">START</button>
+     </section>
+   </section>
+   <aside class="past-activities">
+     <h3>Past Activies</h3>
+     <center>
+       <h5>You haven't logged any activities yet.</h5>
+       <h5>Complete the form to the left to get started.</h5>
+     </center>
+   </aside>
+ </main>
+</body>
+<script type="text/javascript" src="Activity.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</html>
+
+
+
+
+
+
+
 html, body {
-  width: 100%;
-  height: 100%;
+ width: 100%;
+ height: 100%;
 }
 
 
 * {
-  font-family: 'Montserrat', sans-serif;
-  color: #FFF;
+ font-family: 'Montserrat', sans-serif;
+ color: #FFF;
 }
 
 header {
-  height: 8%;
-  width: 100%;
-  background-color: #46424D;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ height: 8%;
+ width: 100%;
+ background-color: #46424D;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 main {
-  margin: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100%;
-  background-color: #2B2733;
+ margin: 0px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 100%;
+ background-color: #2B2733;
 }
 
 aside {
-  margin: 0px;
-  width: 33%;
-  height: 100%;
-  align-self: flex-end;
-  border-left: #46424D 3px solid;
+ margin: 0px;
+ width: 33%;
+ height: 100%;
+ align-self: flex-end;
+ border-left: #46424D 3px solid;
 }
 
 aside > h3 {
-  margin-left: 5%;
+ margin-left: 5%;
 }
 
 
 .activity-container {
-  height: 85%;
-  width: 96%;
-  padding-left: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+ height: 85%;
+ width: 96%;
+ padding-left: 2%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: flex-start;
 }
 
 .select-activity {
-  background-color: #46424D;
-  height: 85%;
-  width: 93%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-radius: 1%;
-  box-shadow: 5px 5px #26222D;
-  font-size: 110%;
+ background-color: #46424D;
+ height: 85%;
+ width: 93%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ padding-left: 2%;
+ padding-right: 2%;
+ border-radius: 1%;
+ box-shadow: 5px 5px #26222D;
+ font-size: 110%;
 }
 
 h4 {
-  margin-bottom: -3%;
+ margin-bottom: -3%;
 }
 
 .category-buttons {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+ width: 100%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
 }
 
 
 .activity-buttons {
-  border: #FFFFFF 3px solid;
-  border-radius: 4px;
-  background-color: #46424D;
-  width: 120px;
-  height: 60px;
+ border: #FFFFFF 3px solid;
+ border-radius: 4px;
+ background-color: #46424D;
+ width: 120px;
+ height: 60px;
 }
 
 .activity-buttons > img {
-  width: 62%;
-  height: 62%;
+ width: 62%;
+ height: 62%;
 }
 
 
 input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #FFF;
-  width: 100%;
-  padding-top: 7%;
+ background: transparent;
+ border: none;
+ border-bottom: 1px solid #FFF;
+ width: 100%;
+ padding-top: 7%;
 }
 
 .accomplish{
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ width: 80%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
 .accomplish > label {
-  align-self: flex-start;
+ align-self: flex-start;
 }
 
 .time {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .minutes,
 .accomplish,
 h4 {
-  margin-left: 8%;
+ margin-left: 8%;
 }
 
 .seconds,
 .start-activity {
-  margin-right: 11%;
+ margin-right: 11%;
 }
 
 .start-activity {
-  color: #46424D;
-  height: 30px;
-  width: 159px;
-  border-radius: 5px;
-  border: none;
-  align-self: flex-end;
+ color: #46424D;
+ height: 30px;
+ width: 159px;
+ border-radius: 5px;
+ border: none;
+ align-self: flex-end;
 }
 
 .countdown-timer{
-  display: flex;
-  align-text: center;
-  justify-content: center;
+ display: flex;
+ align-text: center;
+ justify-content: center;
 }
 
 .timer{
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  background-color: #46424D;
-  color: #FFF;
-  border-radius: 50%;
-  font-size: 17px;
+ border: 1px solid red;
+ display: flex;
+ justify-content: center;
+ align-items:center;
+ background-color: #46424D;
+ color: #FFF;
+ border-radius: 50%;
+ font-size: 17px;
 }
 
 
 .activate-exercise {
-  border: 3px solid #FD8078;
-  color: #FD8078;
+ border: 3px solid #FD8078;
+ color: #FD8078;
 }
 
 .activate-meditate {
-  border: 3px solid #C278FD;
-  color: #C278FD;
+ border: 3px solid #C278FD;
+ color: #C278FD;
 
 }
 
 .activate-study {
-  border: 3px solid #B3FD78;
-  color: #B3FD78;
+ border: 3px solid #B3FD78;
+ color: #B3FD78;
 }
 
 .hidden {
-  display: none;
+ display: none;
 }

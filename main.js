@@ -5,6 +5,19 @@ var studyButton = document.querySelector(".study");
 var meditateIcon = document.getElementById("meditateIcon");
 var exerciseIcon = document.getElementById("exerciseIcon");
 var studyIcon = document.getElementById("studyIcon");
+ feature/form-functionality
+var activityButtons = document.querySelector("activity-buttons");
+var timeInput = document.querySelector(".time");
+var errorMessage = document.querySelector("#errorMessage");
+var accomplishInput = document.querySelector("#accomplishInput");
+var startButton = document.querySelector(".start-activity");
+
+
+
+meditateButton.addEventListener("click", activateMeditate);
+exerciseButton.addEventListener("click", activateExercise);
+studyButton.addEventListener("click", activateStudy);
+
 // var activityButtons = document.querySelector("activity-buttons");
 var timeInput = document.querySelector(".time");
 var activityButton = document.querySelector(".start-activity");
@@ -26,9 +39,11 @@ categoryButtons.addEventListener("click", selectButton)
 // meditateButton.addEventListener("click", activateMeditate);
 // exerciseButton.addEventListener("click", activateExercise);
 // studyButton.addEventListener("click", activateStudy);
+ main
 timeInput.addEventListener("keydown", function() {
   preventNumInputs(event)
 });
+startButton.addEventListener("click", displayAccomplishError)
 
 
 function selectButton() {
@@ -102,6 +117,23 @@ function checkInputField() {
   }
 }
 
+ feature/form-functionality
+
+function displayAccomplishError() {
+  var seconds = document.querySelector(".seconds");
+console.log(seconds)
+  if (!accomplishInput.value === "") {
+    accomplishInput.classList.remove('hidden')
+  }
+}
+
+
+function preventButtons() {
+  for (var i = 0; i < categoryButtons.length;  i++) {
+    if (!categoryButtons[i].classList.contains('activate')) {
+      errorMessage.classList.remove('hidden')
+    }
+
 function displayErrorMessages(event) {
   event.preventDefault()
 
@@ -121,6 +153,7 @@ function displayErrorMessages(event) {
         btnError.innerHTML = `
         <img src="assets/warning.svg" alt="error-icon">
         <p>A category selection is required.</p>`
+ main
   }
 }
 
@@ -169,6 +202,8 @@ function changeBorderColor() {
 //if button is not clicked then error message
 //if the input for accomplish is empty then error message
 //duplicate for minutes and seconds
+ feature/form-functionality
+
 
 //then remove those error messages with some logic
 //we want event listeners
@@ -177,3 +212,4 @@ function changeBorderColor() {
 
 //JS validation checks
 //.check  .require
+ main
